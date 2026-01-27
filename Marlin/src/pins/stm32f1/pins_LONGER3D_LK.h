@@ -47,8 +47,8 @@
 #define Y_MAX_PIN                           PC14  // (Unused in stock Alfawise setup)
 #define Z_MIN_PIN                           PE6   // Standard Endstop or Z_Probe endstop function
 #define Z_MAX_PIN                           PE5   // (Unused in stock Alfawise setup)
-                                 // May be used for BLTouch Servo function on older variants (<= V08)
-#define ONBOARD_ENDSTOPPULLUPS
+                                                  // May be used for BLTouch Servo function on older variants (<= V08)
+#define ONBOARD_ENDSTOPPULLUPS                    // Board has built-in pullups
 
 //
 // Filament Sensor
@@ -124,11 +124,11 @@
 // Other servo devices are not supported on this board!
 //
 #if HAS_Z_SERVO_PROBE
-  #define SERVO0_PIN                        PD13  // Open drain PWM pin on the V0G (GND or floating 5V)
-  #define SERVO0_PWM_OD                           // Comment this if using PE5
+  //#define SERVO0_PIN                        PD13  // Open drain PWM pin on the V0G (GND or floating 5V)
+  //#define SERVO0_PWM_OD                           // Comment this if using PE5
 
-  //#define SERVO0_PIN                      PE5   // Pulled up PWM pin on the V08 (3.3V or 0)
-  //#undef Z_MAX_PIN                              // Uncomment if using ZMAX connector (PE5)
+  #define SERVO0_PIN                      PE5   // Pulled up PWM pin on the V08 (3.3V or 0)
+  #undef Z_MAX_PIN                              // Uncomment if using ZMAX connector (PE5)
 #endif
 
 //
