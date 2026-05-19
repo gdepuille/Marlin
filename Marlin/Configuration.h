@@ -747,9 +747,15 @@
     #define DEFAULT_KI_LIST {   1.00,   1.00 }
     #define DEFAULT_KD_LIST {  74.22,  74.22 }
   #else
-    #define DEFAULT_KP  17.22
-    #define DEFAULT_KI   1.00
-    #define DEFAULT_KD  74.22
+    //#define DEFAULT_KP  17.22
+    //#define DEFAULT_KI   1.00
+    //#define DEFAULT_KD  74.22
+
+    // 19/05/2026 with autotune GCode
+    #define DEFAULT_KP 15.96
+    #define DEFAULT_KI 0.92
+    #define DEFAULT_KD 69.41
+
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
